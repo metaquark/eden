@@ -18,7 +18,7 @@ module Eden
 
     def self.method_missing(name, *args, &block)
       self.options ||= {}
-      self.options[name.to_sym] = *args[0]
+      self.options[name.to_sym] = args[0]
     end
   end
 end
